@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { domainToASCII } from 'url';
 
 @Component({
   selector: 'app-root',
@@ -6,5 +7,10 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'frontend';
+  title = 'My First Angular App';
+  domainToASCII(): void {
+    this.title = this.title.toUpperCase();
+  }
 }
+
+
