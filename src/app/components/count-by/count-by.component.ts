@@ -13,10 +13,10 @@ import { countBySet } from '../../actions/counter.actions';
 export class CountByComponent implements OnInit {
 
   by$: Observable<number>;
-  constructor(private store: Store<AppState>) {
-    store.dispatch(applicationStarted());
-  }
 
+  constructor(private store: Store<AppState>) {
+
+  }
   ngOnInit(): void {
     this.by$ = this.store.pipe(select(selectCountBy));
   }
